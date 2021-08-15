@@ -10,9 +10,12 @@
     bindtap="handleItemTap"
      class="title_item {{item.isActive?'active':''}}">{{item.name}}</view>
   </view>
+  <!-- 这里的slot将会被在父组件使用子组件包裹的内容来代替slot -->
+  <slot></slot>
   <view class="tabs_content">
     内容
   </view>
+
   <view>{{name}}: 父亲传递过来的名字</view>
 
 </view>

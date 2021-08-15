@@ -1,2 +1,16 @@
 <!--pages/tabPage/tabPage.wxml-->
-<Tabs name="jakequc" tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>
+<Tabs name="jakequc" tabs="{{tabs}}" binditemChange="handleItemChange">
+  <block wx:if="{{tabs[0].isActive}}">
+    首页
+  </block>
+  <block wx:if="{{tabs[1].isActive}}">
+    原创
+  </block>
+  <block wx:if="{{tabs[2].isActive}}">
+    分类
+  </block>
+  <block wx:if="{{tabs[3].isActive}}">
+    关于
+  </block>
+
+</Tabs>

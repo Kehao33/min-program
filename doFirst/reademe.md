@@ -143,3 +143,16 @@ eg: obj = {age: 23}
 const {age} = obj; <=> const age = obj.age
 
 
+
+### slot标签，
+  和vue中的一样都是插槽，也就是一个占位符，等到父组件调用子组件的时候 在传递标签过来，最终这些被传递的标签就会替换slot插槽的位置，谁使用组件就传递过来就行
+
+  eg： parent.wxml
+    <ChildrenComponent>
+      <view>子组件包含的chidren就会被ChildrenComponent.js中的slot标签呈现出来</view>
+    </ChildrenComponent>
+
+    ChildrenComponent.wxml
+      <view>
+        <slot></slot> // 这里的slot将会被 “  <view>子组件包含的chidren就会被ChildrenComponent.js中的slot标签呈现出来</view>” 这些内容给代替并渲染到页面上
+      </view>
