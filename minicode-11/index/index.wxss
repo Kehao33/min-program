@@ -1,0 +1,7 @@
+text {
+  font-size: 40rpx;
+  margin: 30rpx;
+}
+button {
+  margin: 30rpx;
+}

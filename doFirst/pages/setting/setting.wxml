@@ -1,0 +1,9 @@
+<!--pages/setting/setting.wxml-->
+
+<view>
+  <input type="text" bindinput="handleInput" placeholder="please input value" style="backgroundColor: #eee" />
+  <button bindtap="handleNum" data-operation="{{1}}">+</button>
+  <button bindtap="handleNum" data-operation="{{-1}}">-</button>
+
+  <text>{{num}}</text>
+</view>

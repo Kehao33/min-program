@@ -1,0 +1,52 @@
+<!--pages/life/life.wxml-->
+<view>
+  <!-- wx:for=“{{arrayName}}”, 他的children可以默认的获取到item为每一项的值，index为每一项的索引 -->
+  <view wx:for="{{users}}"  wx:key="name">
+    <text>{{item.name}}</text>
+    <text>{{index}}</text>
+  </view>
+
+
+  <view wx:for="{{array}}" wx:key="*this"> 循环数组：：：：{{item +"life"}} </view>
+  <text>text用来包裹文字，相当于web中的span标签，属于行内式标签</text>
+  <view>view标签相当于div标签，块级标签</view>
+
+  <view wx:for="{{person}}" for:key="name">
+    循环对象：：：：{{item}} === {{index}}
+  </view>
+
+
+  <view wx:if="{{false}}">不显示</view>
+  <view wx:if="{{true}}" style="color:red">显示</view>
+
+  <view wx:if="{{false}}">
+    不显示
+  </view>
+  <view wx:elif="{{true}}" style="color:blue">显示</view>
+
+
+  <block>
+    <div>我们的心里有光啊</div>
+  </block>
+
+  <template name="tpl">
+    <!-- name为template的名字，在使用模板的时候使用is申明就好，data可以传递数据过去 -->
+    <view>name: {{name}}</view>
+    <view>age: {{age}}</view>
+  </template>
+
+  <view>{{1+1}}</view>
+
+  <template is="tpl" data="{{...person}}"></template>
+
+  <block>
+    <view wx:for="{{[1,2,3,4,5]}}" wx:key="*this">
+      <text>{{item%2?"ODD":"EVEN"}}</text>
+    </view>
+    <view data-className="{{name}}">自定义属性data-*</view>
+
+    <checkbox checked="{{isCheck}}">
+      复选框标签
+    </checkbox>
+  </block>
+</view>

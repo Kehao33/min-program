@@ -1,0 +1,43 @@
+<scroll-view>
+  <!--pages/demo2/demo2.wxml-->
+
+  <view>
+    <view>==========icon图标=========</view>
+    <icon type="success" />
+    <icon type="success_no_circle" />
+    <icon type="warn" />
+    <icon type="info" />
+    <icon type="waiting" />
+    <icon type="cancel" />
+    <icon type="down" />
+    <icon type="search" />
+    <icon type="clear" />
+    <view>>==========进度条>==========</view>
+    <progress percent="30" show-info="true" border-radius="23" font-size="23" stroke-width="100" activeColor="#003"
+      backgroundColor="#0f0" active="true" duration="1" />
+
+    <view>>==========cover-image>==========</view>
+    <cover-image src="https://fex.bdstatic.com/hunter/alog/alog.min.js?v=-18827-18827" />
+    <!-- <match-media min-width="300" max-width="600" style="background-color: #888;">
+    <view>当页面宽度在 300 ~ 500 px 之间时展示这里</view>
+  </match-media> -->
+
+    <view>>== movable-area & movable-view=====</view>
+    <movable-area>
+      <movable-view x="{{x}}" y="{{y}}" direction="all">movable-view可以在movable-area内移动</movable-view>
+    </movable-area>
+
+    <view>>=======page-containerw========</view>
+    <button type="text" bindtap="handleClick">点击有惊喜</button>
+    <page-container class="modal" show="{{show}}" position="center" round="true">
+      <view class="detail-page">
+        <view>我们在充满蝉声并且炽热的夏天开始认识</view>
+        <button type="primary" bindtap="handleClick">back</button>
+      </view>
+    </page-container>
+
+    <view>>=======share-element========</view>
+
+
+  </view>
+</scroll-view>

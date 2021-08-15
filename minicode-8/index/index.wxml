@@ -1,0 +1,46 @@
+<view>
+	<view class="screen screen1">
+		<block wx:for="{{contacts}}" wx:key="id" wx:for-item="contact">
+			<view class="contact" bindtap="showNext" data-idx="{{index}}">
+				<share-element class="avatar" key="avatar" duration="{{duration}}" transform="{{transformIdx === index}}">
+					<image style="width: 40px;" mode="widthFix" src="../images/{{contact.img}}"></image>
+				</share-element>
+				<share-element duration="{{duration}}" class="name" key="name" transform="{{transformIdx === index}}">
+					{{contact.name}}
+				</share-element>
+		
+			</view>
+		</block>
+	</view>
+</view>
+
+<page-container
+	show="{{show}}"
+	overlay="{{overlay}}"
+	close-on-slide-down
+  duration="{{duration}}"
+  position="{{position}}"
+  bindbeforeenter="onBeforeEnter"
+  bindenter="onEnter"
+  bindafterenter="onAfterEnter"
+  bindbeforeleave="onBeforeLeave"
+  bindleave="onLeave"
+  bindafterleave="onAfterLeave"
+  bindclickoverlay="onClickOverlay"
+>
+	<view class="screen screen2">
+		<view class="contact">
+			<share-element class="avatar" duration="{{duration}}" key="avatar" transform>
+				<image style="width: 40px;" mode="widthFix" src="../images/{{contact.img}}" />
+			</share-element>
+			<share-element class="name" key="name" duration="{{duration}}" transform>
+				{{contact.name}}
+			</share-element>
+			<view class="paragraph {{show ? 'enter' : ''}}">
+			<text>My name is {{contact.name}}</text>
+				
+			</view>
+			<button class="screen2-button" bindtap="showPrev" hidden="{{!show}}" hover-class="none">Click Me</button>
+		</view>
+	</view>
+</page-container>

@@ -1,0 +1,2 @@
+<!--pages/tabPage/tabPage.wxml-->
+<Tabs name="jakequc" tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>

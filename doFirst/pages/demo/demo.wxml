@@ -1,0 +1,73 @@
+<view>
+  <!--pages/demo/demo.wxml-->
+  <swiper autoplay interval="2000" circular indicator-dots indicator-color="#390" indicator-active-color="#f00">
+    <swiper-item>
+      <image mode="withFix" src="https://aecpm.alicdn.com/simba/img/TB1XotJXQfb_uJkSnhJSuvdDVXa.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image
+        src="https://img.alicdn.com/imgextra/i3/6000000000038/O1CN01A0E2931C9Rk0yD9R8_!!6000000000038-0-octopus.jpg">
+      </image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="withFix" src="https://aecpm.alicdn.com/simba/img/TB183NQapLM8KJjSZFBSutJHVXa.jpg"></image>
+    </swiper-item>
+  </swiper>
+
+
+  <button bindtap="handleClickShare">点击我实现共享组件</button>
+  <share-element key="name" transform="true">
+    <text class="userName"> {{user.name}}
+    </text>
+  </share-element>
+
+  <page-container show="{{shareShow}}"
+  overlay-style="background-color: #444"
+  z-index="99"
+  position="bottom"
+  overlay="{{true}}"
+  >
+    <share-element key="name" transform="true">
+      <text class="userName"> {{user.name}} 点击我实现共享组件</text>
+    </share-element>
+  </page-container>
+
+  <button style="margin-top: 20px;">默认按钮</button>
+  <button size="mini" style="margin-top: 20px;">默认按钮</button>
+  <button type="primary" style="margin-top: 20px;">type="primary"</button>
+  <button type="warn" style="margin-top: 20px;">type="warn"</button>
+  <button type="reset" style="margin-top: 20px;">type="reset "</button>
+
+  <button open-type="contact" style="margin-top: 20px;">contact</button>
+  <button open-type="share" style="margin-top: 20px;">share</button>
+  <button open-type="getPhoneNumber" bindgetphonenumber="getphone" style="margin-top: 20px;">getPhoneNumber</button>
+  <button open-type="getUserInfo" style="margin-top: 20px;">getUserInfo</button>
+  <button open-type="openSetting" style="margin-top: 20px;">openSetting</button>
+  <button open-type="feedback" style="margin-top: 20px;">feedback</button>
+  <text user-select decode>
+    jakequc &nbsp; &gt; &lt;
+  </text>
+
+  <navigator url="/pages/demo2/demo2">
+    保留当前页面，跳转到另外一个页面中去，但是不能跳转到tabbar耶main
+  </navigator>
+
+
+  <navigator url="/pages/demo2/demo2" open-type="redirect">
+    关闭当前页面，跳转到应用的某个页面，但是不允许跳转到tabbar页面
+  </navigator>
+
+  <navigator url="/pages/demo2/demo2" open-type="reLaunch">
+    可以随意跳转到任意页面
+  </navigator>
+
+  <rich-text nodes="{{html}}">
+  </rich-text>
+  <rich-text nodes="{{html1}}">
+  </rich-text>
+
+
+
+
+  <image mode="withFix" src="https://i.loli.net/2021/07/11/PJHhXN8EUTb4Ksz.png" mode="bottom" lazy-load></image>
+</view>

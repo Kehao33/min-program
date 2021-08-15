@@ -1,0 +1,62 @@
+{
+  "pages":[
+    "pages/tabPage/tabPage",
+    "pages/demo2/demo2",
+    "pages/demo/demo",
+    "pages/index/index",
+    "pages/setting/setting",
+    "pages/life/life",
+    "pages/search/search"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f00",
+    "navigationBarTitleText": "科皓先生",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#eee"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home_active.png"
+      },
+      {
+        "pagePath": "pages/life/life",
+        "text": "生活广场",
+        "iconPath": "icons/video.png",
+        "selectedIconPath": "icons/video_active.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "个人中心",
+        "iconPath": "icons/Profile.png",
+        "selectedIconPath": "icons/Profile_active.png"
+      },
+      {
+        "pagePath":"pages/search/search",
+        "text": "搜一搜",
+        "iconPath": "icons/search.png",
+        "selectedIconPath": "icons/search_active.png"
+      }
+    ] ,
+    "color": "#0094ff",
+    "selectedColor": "#ff9400",
+    "backgroundColor": "#eee"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  },
+  "darkmode": true
+}
